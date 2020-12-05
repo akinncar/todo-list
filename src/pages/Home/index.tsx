@@ -1,5 +1,4 @@
-import { act } from "@testing-library/react";
-import { useState, useEffect } from "react";
+import { useTask } from "../../hooks/task";
 
 import { FaCheck, FaTimes, FaPlus, FaTrash } from "react-icons/fa";
 
@@ -14,55 +13,17 @@ import {
 } from "./styles";
 
 const Home: React.FC = () => {
-  const [activeTasks, setActiveTasks] = useState([]);
-
-  const [doneTasks, setDoneTasks] = useState([]);
-
-  useEffect(() => {}, []);
-
-  function changeTaskToDone(index) {
-    setDoneTasks([...doneTasks, activeTasks[index]]);
-
-    let newActiveTasks = activeTasks.slice();
-    newActiveTasks.splice(index, 1);
-    setActiveTasks(newActiveTasks);
-  }
-
-  function changeTaskToActive(index) {
-    setActiveTasks([...activeTasks, doneTasks[index]]);
-
-    let newDoneTasks = doneTasks.slice();
-    newDoneTasks.splice(index, 1);
-    setDoneTasks(newDoneTasks);
-  }
-
-  function editActiveTask(text, index) {
-    let newActiveTasks = activeTasks.slice();
-    newActiveTasks[index] = text;
-    setActiveTasks(newActiveTasks);
-  }
-
-  function editDoneTask(text, index) {
-    let newDoneTask = doneTasks.slice();
-    newDoneTask[index] = text;
-    setDoneTasks(newDoneTask);
-  }
-
-  function deleteActiveTask(index) {
-    let newActiveTasks = activeTasks.slice();
-    newActiveTasks.splice(index, 1);
-    setActiveTasks(newActiveTasks);
-  }
-
-  function deleteDoneTask(index) {
-    let newDoneTasks = doneTasks.slice();
-    newDoneTasks.splice(index, 1);
-    setDoneTasks(newDoneTasks);
-  }
-
-  function addActiveTask() {
-    setActiveTasks([...activeTasks, ""]);
-  }
+  const {
+    activeTasks,
+    doneTasks,
+    changeTaskToDone,
+    changeTaskToActive,
+    editActiveTask,
+    editDoneTask,
+    deleteActiveTask,
+    deleteDoneTask,
+    addActiveTask,
+  } = useTask();
 
   return (
     <Container>
