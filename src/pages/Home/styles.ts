@@ -43,7 +43,7 @@ export const TaskListContainer = styled.div`
 
 export const TaskList = styled.div`
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 12px;
 
   h2 {
@@ -53,9 +53,16 @@ export const TaskList = styled.div`
     font-weight: 400;
     text-transform: capitalize;
   }
+
+  > button {
+    width: 100%;
+    background: none;
+    border: none;
+    margin-bottom: 8px;
+  }
 `;
 
-export const Task = styled.div`
+export const TaskCard = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -66,8 +73,26 @@ export const Task = styled.div`
   border-radius: 12px;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.1);
 
+  transition: opacity 4s;
+
   p {
     color: #000;
+  }
+
+  textarea {
+    color: #000;
+    font-size: 16px;
+
+    height: 100%;
+    resize: none;
+    display: block;
+
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   div {
@@ -79,5 +104,6 @@ export const Task = styled.div`
   button {
     background: none;
     border: none;
+    margin-left: 12px;
   }
 `;
