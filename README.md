@@ -20,7 +20,7 @@
 
 ## :dart: Objetivo
 
-Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usuário possa adicionar uma nova tarefa, edita-la, marca-la como feita, e excluí-la.
+Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usuário possa adicionar uma nova tarefa, editá-la, marcá-la como feita, e excluí-la.
 
 ## :hammer: Tecnologias e Recursos
 
