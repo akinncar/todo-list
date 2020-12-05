@@ -19,6 +19,22 @@ export const Content = styled.div`
   justify-content: center;
 `;
 
+export const NoContent = styled.div`
+  justify-content: center;
+  padding: 58px;
+
+  p {
+    color: #000;
+  }
+
+  > button {
+    width: 100%;
+    background: none;
+    border: none;
+    margin: 18px 0;
+  }
+`;
+
 export const Header = styled.div`
   display: flex;
   flex: 1;
@@ -58,7 +74,7 @@ export const TaskList = styled.div`
     width: 100%;
     background: none;
     border: none;
-    margin-bottom: 8px;
+    margin: 8px 0;
   }
 `;
 
