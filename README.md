@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# :memo: To-Do List Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![ToDo WebApp](./public/preview.gif)](https://todo-list.akinncar.vercel.app/)
 
-## Available Scripts
+<p align="center"> 
+  <a aria-label="" href="/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-success.svg?style=flat-square&color=33CC12" target="_blank" />
+  </a>
 
-In the project directory, you can run:
+  <a aria-label="instagram" href="https://www.instagram.com/akinncar/" target="_blank">
+    <img alt="Follow @akinncar" src="https://img.shields.io/twitter/follow/akinncar.svg?style=flat-square&label=Follow%20%40akinncar&logo=INSTAGRAM&logoColor=FFFFFF&labelColor=000&logoWidth=15&color=lightgray" />
+  </a>
+</p>
 
-### `yarn start`
+<p align="center">
+  <a aria-label="try expo crossy road in the browser" href="https://todo-list.akinncar.vercel.app/"><b>Experimente no seu navegador</b></a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :dart: Objetivo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usuário possa adicionar uma nova tarefa, edita-la, marca-la como feita, e excluí-la.
 
-### `yarn test`
+## :hammer: Tecnologias e Recursos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
+  <li>React JS</li>
+  <li>Typescripta</li>
+  <li>Styled Components</li>
+  <li>Context API</li>
+  <li>Async Storage</li>
+  <li>React DnD (Drag and Drop)</li>
+  <li>Testing Library</li>
+</ul>
 
-### `yarn build`
+## :computer: Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para rodar o projeto na sua máquina, você terá que instalar as dependências do projeto com yarn:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`$ yarn`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Após instalar todas as dependências, para rodar o projeto em ambiente local, você pode rodar em seu terminal:
 
-### `yarn eject`
+`$ yarn start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Você também pode executar os testes da aplicação rodando:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`$ yarn test`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Se desejar publicar o app, é possível gerar o build do mesmo e envia-lo para produção utilizando os eguinte comando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`$ yarn build`
 
-## Learn More
+## :closed_book: Licença
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este código-fonte está disponível sob a [licença MIT](LICENSE). Algumas das dependências são licenciadas de forma diferente, com a licença BSD, por exemplo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :boy: Contato
+
+Akinn Rosa - [Github](https://github.com/akinncar) - **[akinncar@hotmail.com](mailto:akinncar@hotmail.com)**
