@@ -16,8 +16,9 @@ const TaskContext = createContext<TaskContextData>({} as TaskContextData);
 
 const TaskProvider: React.FC = ({ children }) => {
   const initialActiveTasks =
-    JSON.parse(localStorage.getItem("activeTasks")) || [];
-  const initialDoneTasks = JSON.parse(localStorage.getItem("doneTasks")) || [];
+    JSON.parse(localStorage.getItem("@ToDoListWebApp:activeTasks")) || [];
+  const initialDoneTasks =
+    JSON.parse(localStorage.getItem("@ToDoListWebApp:doneTasks")) || [];
 
   const [activeTasks, setActiveTasks] = useState<Array<string>>(
     initialActiveTasks
@@ -25,11 +26,17 @@ const TaskProvider: React.FC = ({ children }) => {
   const [doneTasks, setDoneTasks] = useState<Array<string>>(initialDoneTasks);
 
   useEffect(() => {
-    localStorage.setItem("activeTasks", JSON.stringify(activeTasks));
+    localStorage.setItem(
+      "@ToDoListWebApp:activeTasks",
+      JSON.stringify(activeTasks)
+    );
   }, [activeTasks]);
 
   useEffect(() => {
-    localStorage.setItem("doneTasks", JSON.stringify(doneTasks));
+    localStorage.setItem(
+      "@ToDoListWebApp:doneTasks",
+      JSON.stringify(doneTasks)
+    );
   }, [doneTasks]);
 
   function changeTaskToDone(index: number): void {
