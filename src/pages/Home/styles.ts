@@ -19,37 +19,6 @@ export const Content = styled.div`
   justify-content: center;
 `;
 
-export const NoContent = styled.div`
-  justify-content: center;
-  padding: 58px;
-
-  p {
-    color: #000;
-  }
-
-  > button {
-    width: 100%;
-    background: none;
-    border: none;
-    margin: 18px 0;
-  }
-`;
-
-export const Header = styled.div`
-  display: flex;
-  flex: 1;
-  background: #e0e0e0;
-  border-radius: 12px 12px 0 0;
-  padding: 18px;
-  justify-content: center;
-
-  h1 {
-    font-size: 1.45rem;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-`;
-
 export const TaskListContainer = styled.div`
   display: flex;
   flex: 1;
@@ -69,58 +38,5 @@ export const TaskList = styled.div`
     font-size: 1.35rem;
     font-weight: 400;
     text-transform: capitalize;
-  }
-
-  > button {
-    width: 100%;
-    background: none;
-    border: none;
-    margin: 8px 0;
-  }
-`;
-
-export const TaskCard = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 16px;
-  padding: 16px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.1);
-
-  transition: opacity 4s;
-
-  p {
-    color: #000;
-  }
-
-  textarea {
-    color: #000;
-    font-size: 16px;
-
-    height: 100%;
-    resize: none;
-    display: block;
-
-    border: none;
-    background-image: none;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-
-  div {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-  }
-
-  button {
-    background: none;
-    border: none;
-    margin-left: 12px;
   }
 `;
