@@ -24,20 +24,11 @@ Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usu
 
 ## :hammer: Tecnologias e Recursos
 
-<ul>
-  <li>ReactJS</li>
-  <li>Typescript</li>
-  <li>Styled Components</li>
-  <li>Context API</li>
-  <li>Async Storage</li>
-  <li>React DnD (Drag and Drop)</li>
-  <li>Testing Library</li>
-</ul>
-
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
 - [React DnD (Drag and Drop)](https://react-dnd.github.io/react-dnd/about)
+- [Context API](https://reactjs.org/docs/context.html)
 - [Async Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/Window.localStorage)
 - [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
