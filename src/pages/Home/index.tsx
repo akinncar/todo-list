@@ -66,26 +66,32 @@ const Home: React.FC = () => {
             <>
               <TaskList ref={dopActiveRef} isDragging={canDropActive}>
                 <h2>Active Tasks ({activeTasks.length})</h2>
-                {activeTasks.map((activeTask, index) => (
-                  <TaskCard
-                    key={index}
-                    typeTask="active"
-                    task={activeTask}
-                    index={index}
-                  />
-                ))}
+                {activeTasks.length > 0 && (
+                  <section>
+                    {activeTasks.map((activeTask, index) => (
+                      <TaskCard
+                        key={index}
+                        typeTask="active"
+                        task={activeTask}
+                        index={index}
+                      />
+                    ))}
+                  </section>
+                )}
                 <AddButton />
               </TaskList>
               <TaskList ref={dropDoneRef} isDragging={canDropDone}>
                 <h2>Done Tasks ({doneTasks.length})</h2>
-                {doneTasks.map((doneTask, index) => (
-                  <TaskCard
-                    key={index}
-                    typeTask="done"
-                    task={doneTask}
-                    index={index}
-                  />
-                ))}
+                <section>
+                  {doneTasks.map((doneTask, index) => (
+                    <TaskCard
+                      key={index}
+                      typeTask="done"
+                      task={doneTask}
+                      index={index}
+                    />
+                  ))}
+                </section>
               </TaskList>
             </>
           )}

@@ -9,7 +9,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
   p {
     color: white;
@@ -39,10 +41,13 @@ export const TaskListContainer = styled.div`
 `;
 
 export const TaskList = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   width: 100%;
-  justify-content: center;
   padding: 12px;
   align-items: center;
+  justify-content: flex-start;
 
   h2 {
     justify-content: center;
@@ -50,6 +55,14 @@ export const TaskList = styled.div`
     font-size: 1.3rem;
     font-weight: 400;
     text-transform: capitalize;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   @media (max-width: 1100px) {

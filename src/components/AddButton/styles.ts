@@ -1,11 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.section`
+interface Props {
+  hasTasks: boolean;
+}
+
+export const Container = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;
   justify-content: center;
   width: 100%;
+
+  ${(props: Props) =>
+    !props.hasTasks &&
+    css`
+      align-items: center;
+    `};
 
   button {
     background: #fff;

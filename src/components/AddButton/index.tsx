@@ -5,10 +5,10 @@ import { Container } from "./styles";
 import { FaPlus } from "react-icons/fa";
 
 const AddButton: React.FC = () => {
-  const { addActiveTask } = useTask();
+  const { activeTasks, addActiveTask } = useTask();
 
   return (
-    <Container>
+    <Container hasTasks={activeTasks.length > 0}>
       <button onClick={addActiveTask}>
         <FaPlus color="#000" />
       </button>

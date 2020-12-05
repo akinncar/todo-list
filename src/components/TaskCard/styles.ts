@@ -7,9 +7,11 @@ interface Props {
 export const Container = styled.div`
   display: flex;
   flex: 1;
+  width: 100%;
   flex-direction: column;
   max-width: 400px;
-  margin: 16px;
+  max-height: 90px;
+  margin: 12px;
   padding: 16px;
   background: #ffffff;
   border-radius: 12px;
@@ -51,7 +53,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 1100px) {
-    max-width: 100%;
+    width: 80%;
   }
 
   ${(props: Props) =>
