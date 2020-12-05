@@ -10,7 +10,7 @@ export default createGlobalStyle`
   
   body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom right, #c376ff, #3f8cff);
     justify-content: center;
     align-items: center;  

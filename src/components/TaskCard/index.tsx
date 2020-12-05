@@ -1,3 +1,5 @@
+import { useDrag } from "react-dnd";
+
 import { useTask } from "../../hooks/task";
 
 import { Container } from "./styles";
@@ -20,6 +22,13 @@ const TaskCard: React.FC<Props> = ({ typeTask, task, index }: Props) => {
     deleteDoneTask,
   } = useTask();
 
+  const [{ isDragging }, dragRef] = useDrag({
+    item: { type: "CARD", typeTask: typeTask, task: task, index: index },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
   function editTask(text: string, index: number) {
     typeTask === "active"
       ? editActiveTask(text, index)
@@ -35,7 +44,7 @@ const TaskCard: React.FC<Props> = ({ typeTask, task, index }: Props) => {
   }
 
   return (
-    <Container>
+    <Container ref={dragRef} isDragging={isDragging}>
       <textarea
         placeholder="Edit task description..."
         value={task}

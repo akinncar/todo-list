@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface Props {
+  isDragging: boolean;
+}
 
 export const Container = styled.div`
   flex: 1;
@@ -36,20 +40,25 @@ export const TaskListContainer = styled.div`
 
 export const TaskList = styled.div`
   width: 100%;
-  /* height: 100%; */
   justify-content: center;
-  margin: 12px;
+  padding: 12px;
   align-items: center;
 
   h2 {
     justify-content: center;
     text-align: center;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 400;
     text-transform: capitalize;
   }
 
   @media (max-width: 1100px) {
-    margin: 12px 0;
+    padding: 12px 0;
   }
+
+  ${(props: Props) =>
+    props.isDragging &&
+    css`
+      background: #eeeeee;
+    `}
 `;

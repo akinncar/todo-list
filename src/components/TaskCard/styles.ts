@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface Props {
+  isDragging: boolean;
+}
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +15,7 @@ export const Container = styled.div`
   border-radius: 12px;
   box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.1);
 
-  transition: opacity 4s;
+  cursor: grab;
 
   p {
     color: #000;
@@ -19,7 +23,7 @@ export const Container = styled.div`
 
   textarea {
     color: #000;
-    font-size: 16px;
+    font-size: 1em;
 
     height: 100%;
     resize: none;
@@ -42,10 +46,26 @@ export const Container = styled.div`
   button {
     background: none;
     border: none;
-    margin-left: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   @media (max-width: 1100px) {
     max-width: 100%;
   }
+
+  ${(props: Props) =>
+    props.isDragging &&
+    css`
+      border: 2px dashed rgba(0, 0, 0, 0.2);
+      background: transparent;
+      box-shadow: none;
+      cursor: grabbing;
+
+      div,
+      button,
+      textarea {
+        opacity: 0;
+      }
+    `}
 `;
