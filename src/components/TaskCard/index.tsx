@@ -44,13 +44,13 @@ const TaskCard: React.FC<Props> = ({ typeTask, task, index }: Props) => {
       <div>
         <button onClick={() => changeTaskStatus(index)}>
           {typeTask === "active" ? (
-            <FaCheck color="#00b200" />
+            <FaCheck color="#00b200" size={"1.20em"} />
           ) : (
-            <FaUndo color="#f00" />
+            <FaUndo color="#f00" size={"1.20em"} />
           )}
         </button>
         <button onClick={() => deleteTask(index)}>
-          <FaTrash color="#808080" />
+          <FaTrash color="#808080" size={"1.20em"} />
         </button>
       </div>
     </Container>
