@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useCallback,
-  useState,
-  useEffect,
-} from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 interface TaskContextData {
   activeTasks: Array<string>;
@@ -21,12 +15,24 @@ interface TaskContextData {
 const TaskContext = createContext<TaskContextData>({} as TaskContextData);
 
 const TaskProvider: React.FC = ({ children }) => {
-  const [activeTasks, setActiveTasks] = useState([]);
-  const [doneTasks, setDoneTasks] = useState([]);
+  const initialActiveTasks =
+    JSON.parse(localStorage.getItem("activeTasks")) || [];
+  const initialDoneTasks = JSON.parse(localStorage.getItem("doneTasks")) || [];
 
-  useEffect(() => {}, []);
+  const [activeTasks, setActiveTasks] = useState<Array<string>>(
+    initialActiveTasks
+  );
+  const [doneTasks, setDoneTasks] = useState<Array<string>>(initialDoneTasks);
 
-  function changeTaskToDone(index) {
+  useEffect(() => {
+    localStorage.setItem("activeTasks", JSON.stringify(activeTasks));
+  }, [activeTasks]);
+
+  useEffect(() => {
+    localStorage.setItem("doneTasks", JSON.stringify(doneTasks));
+  }, [doneTasks]);
+
+  function changeTaskToDone(index: number): void {
     setDoneTasks([...doneTasks, activeTasks[index]]);
 
     let newActiveTasks = activeTasks.slice();
@@ -34,7 +40,7 @@ const TaskProvider: React.FC = ({ children }) => {
     setActiveTasks(newActiveTasks);
   }
 
-  function changeTaskToActive(index) {
+  function changeTaskToActive(index: number): void {
     setActiveTasks([...activeTasks, doneTasks[index]]);
 
     let newDoneTasks = doneTasks.slice();
@@ -42,31 +48,31 @@ const TaskProvider: React.FC = ({ children }) => {
     setDoneTasks(newDoneTasks);
   }
 
-  function editActiveTask(text, index) {
+  function editActiveTask(text: string, index: number): void {
     let newActiveTasks = activeTasks.slice();
     newActiveTasks[index] = text;
     setActiveTasks(newActiveTasks);
   }
 
-  function editDoneTask(text, index) {
+  function editDoneTask(text: string, index: number): void {
     let newDoneTask = doneTasks.slice();
     newDoneTask[index] = text;
     setDoneTasks(newDoneTask);
   }
 
-  function deleteActiveTask(index) {
+  function deleteActiveTask(index: number): void {
     let newActiveTasks = activeTasks.slice();
     newActiveTasks.splice(index, 1);
     setActiveTasks(newActiveTasks);
   }
 
-  function deleteDoneTask(index) {
+  function deleteDoneTask(index: number): void {
     let newDoneTasks = doneTasks.slice();
     newDoneTasks.splice(index, 1);
     setDoneTasks(newDoneTasks);
   }
 
-  function addActiveTask() {
+  function addActiveTask(): void {
     setActiveTasks([...activeTasks, ""]);
   }
 

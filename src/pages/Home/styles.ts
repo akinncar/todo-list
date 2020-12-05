@@ -61,6 +61,7 @@ export const TaskList = styled.div`
   width: 100%;
   justify-content: center;
   margin: 12px;
+  align-items: center;
 
   h2 {
     justify-content: center;
