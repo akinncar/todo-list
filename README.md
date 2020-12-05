@@ -1,6 +1,6 @@
-# :memo: To-Do List Web App
-
-[![ToDo WebApp](./public/preview.gif)](https://todo-list.akinncar.vercel.app/)
+<p align="center"> 
+  <img src="./public/preview.gif" href="https://todo-list.akinncar.vercel.app/">
+</p>
 
 <p align="center"> 
   <a aria-label="" href="/LICENSE" target="_blank">
@@ -23,8 +23,8 @@ Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usu
 ## :hammer: Tecnologias e Recursos
 
 <ul>
-  <li>React JS</li>
-  <li>Typescripta</li>
+  <li>ReactJS</li>
+  <li>Typescript</li>
   <li>Styled Components</li>
   <li>Context API</li>
   <li>Async Storage</li>
@@ -32,7 +32,16 @@ Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usu
   <li>Testing Library</li>
 </ul>
 
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [React DnD (Drag and Drop)](https://react-dnd.github.io/react-dnd/about)
+- [Async Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/Window.localStorage)
+- [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
 ## :computer: Instalação
+
+**Se você nunca rodou um projeto React, é necessário instalar o [Node >= 8.10 e npm >= 5.6](https://nodejs.org/en/), e também o [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).**
 
 Para rodar o projeto na sua máquina, você terá que instalar as dependências do projeto com yarn:
 
