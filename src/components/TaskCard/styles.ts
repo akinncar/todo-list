@@ -44,4 +44,8 @@ export const Container = styled.div`
     border: none;
     margin-left: 12px;
   }
+
+  @media (max-width: 1100px) {
+    max-width: 100%;
+  }
 `;

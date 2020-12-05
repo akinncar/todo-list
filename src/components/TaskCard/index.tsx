@@ -2,7 +2,7 @@ import { useTask } from "../../hooks/task";
 
 import { Container } from "./styles";
 
-import { FaCheck, FaTimes, FaTrash } from "react-icons/fa";
+import { FaCheck, FaUndo, FaTrash } from "react-icons/fa";
 
 interface Props {
   typeTask: "active" | "done";
@@ -37,6 +37,7 @@ const TaskCard: React.FC<Props> = ({ typeTask, task, index }: Props) => {
   return (
     <Container>
       <textarea
+        placeholder="Edit task description..."
         value={task}
         onChange={(e) => editTask(e.target.value, index)}
       />
@@ -45,7 +46,7 @@ const TaskCard: React.FC<Props> = ({ typeTask, task, index }: Props) => {
           {typeTask === "active" ? (
             <FaCheck color="#00b200" />
           ) : (
-            <FaTimes color="#f00" />
+            <FaUndo color="#f00" />
           )}
         </button>
         <button onClick={() => deleteTask(index)}>

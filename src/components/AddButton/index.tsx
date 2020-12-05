@@ -8,8 +8,10 @@ const AddButton: React.FC = () => {
   const { addActiveTask } = useTask();
 
   return (
-    <Container onClick={addActiveTask}>
-      <FaPlus color="#000" />
+    <Container>
+      <button onClick={addActiveTask}>
+        <FaPlus color="#000" />
+      </button>
     </Container>
   );
 };

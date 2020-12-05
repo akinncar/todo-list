@@ -17,6 +17,10 @@ export const Content = styled.div`
   border-radius: 12px;
   width: 45%;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    width: 85%;
+  }
 `;
 
 export const TaskListContainer = styled.div`
@@ -24,10 +28,15 @@ export const TaskListContainer = styled.div`
   flex: 1;
   flex-direction: row;
   justify-content: space-evenly;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 export const TaskList = styled.div`
   width: 100%;
+  /* height: 100%; */
   justify-content: center;
   margin: 12px;
   align-items: center;
@@ -38,5 +47,9 @@ export const TaskList = styled.div`
     font-size: 1.35rem;
     font-weight: 400;
     text-transform: capitalize;
+  }
+
+  @media (max-width: 1100px) {
+    margin: 12px 0;
   }
 `;
