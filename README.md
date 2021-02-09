@@ -20,7 +20,6 @@
 
 ## :dart: Goals
 
-Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usuário possa adicionar uma nova tarefa, editá-la, marcá-la como feita, e excluí-la.
 Develop a webapp, with a todo-list funcionalities where the user can add, edit, done, undone, and delete tasks.
 
 ## :hammer: Stack
