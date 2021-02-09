@@ -15,14 +15,15 @@
 </p>
 
 <p align="center">
-  <a aria-label="try expo crossy road in the browser" href="https://todo-list.akinncar.vercel.app/"><b>Experimente no seu navegador</b></a>
+  <a aria-label="try expo crossy road in the browser" href="https://todo-list.akinncar.vercel.app/"><b>Try in your browser</b></a>
 </p>
 
-## :dart: Objetivo
+## :dart: Goals
 
 Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usuário possa adicionar uma nova tarefa, editá-la, marcá-la como feita, e excluí-la.
+Develop a webapp, with a todo-list funcionalities where the user can add, edit, done, undone, and delete tasks.
 
-## :hammer: Tecnologias e Recursos
+## :hammer: Stack
 
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
@@ -32,30 +33,30 @@ Desenvolver um webapp, com as funcionalidades de uma lsita de tarefas onde o usu
 - [Async Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/Window.localStorage)
 - [Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-## :computer: Instalação
+## :computer: Installation
 
-**Se você nunca rodou um projeto React, é necessário instalar o [Node >= 8.10 e npm >= 5.6](https://nodejs.org/en/), e também o [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).**
+**If you never run a React project, will be necesssary download [Node >= 8.10 e npm >= 5.6](https://nodejs.org/en/), and [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable).**
 
-Para rodar o projeto na sua máquina, você terá que instalar as dependências do projeto com yarn:
+To run this project in your machine, you wanna have to install dependencies:
 
 `$ yarn`
 
-Após instalar todas as dependências, para rodar o projeto em ambiente local, você pode rodar em seu terminal:
+After installing all dependencies, to run the project in a local environment, you can run on your terminal:
 
 `$ yarn start`
 
-Você também pode executar os testes da aplicação rodando:
+You can also run the application tests by running:
 
 `$ yarn test`
 
-Se desejar publicar o app, é possível gerar o build do mesmo e envia-lo para produção utilizando os eguinte comando:
+If you want to publish the app, you can generate the build of it and send it to production using the following command:
 
 `$ yarn build`
 
-## :closed_book: Licença
+## :closed_book: License
 
-Este código-fonte está disponível sob a [licença MIT](LICENSE). Algumas das dependências são licenciadas de forma diferente, com a licença BSD, por exemplo.
+This source code is available under the [MIT license](LICENSE). Some of the dependencies are licensed differently, with the BSD license, for example.
 
-## :boy: Contato
+## :boy: Contact
 
 Akinn Rosa - [Github](https://github.com/akinncar) - **[akinncar@hotmail.com](mailto:akinncar@hotmail.com)**
